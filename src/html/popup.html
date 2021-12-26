@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/popup.css">
+	</head>
+
+	<body>
+		<div id="titleDiv">
+			<h2>Block Me Zaddy &#128553</h2>
+			<img src="../resources/sus.jpg"/>
+			<p>When adding a new blocking pattern you'll have to restart browser or open a new tab for changes to take effect!</p>
+		</div>
+
+		<div id="formDiv">
+			<label for="blockUrl">Block Pattern:</label><br>
+			<input type="text" id="blockUrl" name="blockUrl"><br>
+			<div id="formButtons">
+				<button id="createBlockButton" type="submit">Block Pattern</button>
+				<button id="viewBlocksButton">View My Blocks</button>
+			</div>
+		</div>
+
+		<div id="blocksDiv" style="overflow-x:auto;">
+		</div>
+
+		<script src="../js/popup.js"></script>
+	</body>
+</html>
