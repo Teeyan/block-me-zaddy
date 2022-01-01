@@ -31,12 +31,10 @@ chrome.webRequest.onBeforeRequest.addListener(function(request) {
 	for (var url in urlBlocksCache) {
 		urlRegExp = new RegExp(url);
 		requestInd = request.url.search(urlRegExp)
-		if(requestInd != 1) {
+		if(requestInd != -1) {
 			console.log("url was blocked based off of rule matching %s", url);
 			return { "redirectUrl": chrome.extension.getURL("../html/redirect.html") };
 		}
 	}
-
-	return { "redirectUrl": request.url };
-
+	return;
 }, { urls:["https://*/*", "http://*/*"] }, ["blocking"]);
